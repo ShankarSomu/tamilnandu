@@ -1,38 +1,53 @@
-# TamilNandu Landing Page
+# TamilNandu
 
-Coming-soon page for TamilNandu, a Tamil-rooted global mutual-help community open to everyone.
+TamilNandu is a Tamil-rooted global mutual-help community, open to everyone. Its symbol is a red crab helping another crab climb, the opposite of the "crab bucket" story. This repository holds the public landing page and waitlist, and it will grow into the community platform, built together with the community.
 
-## Stack
+Live site: https://tamilnandu.org
 
-- Next.js (static export) + TypeScript + Tailwind CSS
-- Cloudflare Pages for hosting
-- A Pages Function (`functions/api/waitlist.ts`) saves signups to a Cloudflare D1 database
+## Help build it
 
-## Contributing
+You don't need to run the site to help. Developers, designers, writers and community builders are all welcome.
 
-Contributions of every size are welcome. Read [CONTRIBUTING.md](./CONTRIBUTING.md) first, and follow the [Code of Conduct](./CODE_OF_CONDUCT.md). Report security problems privately as described in [SECURITY.md](./SECURITY.md). Releases are listed in [CHANGELOG.md](./CHANGELOG.md) and use [Semantic Versioning](https://semver.org/).
+- **Start here:** [CONTRIBUTING.md](./CONTRIBUTING.md) explains how to fork, branch and open a pull request.
+- **Find something to do:** look for issues labeled [`good first issue`](https://github.com/ShankarSomu/tamilnandu/labels/good%20first%20issue) or [`help wanted`](https://github.com/ShankarSomu/tamilnandu/labels/help%20wanted).
+- **Share an idea or ask a question:** use [Discussions](https://github.com/ShankarSomu/tamilnandu/discussions).
+- **Report a bug or suggest a feature:** open an [issue](https://github.com/ShankarSomu/tamilnandu/issues/new/choose).
+- **Report a security problem:** privately, as described in [SECURITY.md](./SECURITY.md).
+
+Everyone follows the [Code of Conduct](./CODE_OF_CONDUCT.md). Changes reach `main` only through a reviewed pull request. Releases are listed in [CHANGELOG.md](./CHANGELOG.md) and use [Semantic Versioning](https://semver.org/).
 
 Licensed under the [MIT License](./LICENSE).
 
-## Local development
+## Run it locally
+
+Contributors only need this. Hosting and deployment are handled by the maintainers.
 
 - `npm install`
-- `npm run dev` for the page with live reload. The signup form needs the Function, so it only works in preview.
-- `npm run db:init:local` once, then `npm run preview` to build and run the full site, including signups, at `http://localhost:8788`.
+- `npm run dev` starts the page with live reload. The signup form needs the Function, so it only works in preview.
+- `npm run db:init:local` once, then `npm run preview`, builds and runs the full site with signups at `http://localhost:8788`.
+- Before opening a PR: `npx tsc --noEmit` and `npm run build`.
 
-## Deploy to Cloudflare
+## Stack
+
+- Next.js (static export), TypeScript and Tailwind CSS
+- Cloudflare Pages for hosting
+- A Pages Function (`functions/api/waitlist.ts`) saves signups to a Cloudflare D1 database
+
+## For maintainers
+
+Deployment and signup data need Cloudflare access, so contributors don't do these.
+
+**Deploy**
 
 1. `npx wrangler login`
 2. `npx wrangler d1 create tamilnandu-waitlist`, then paste the printed `database_id` into [wrangler.toml](./wrangler.toml).
-3. `npm run db:init` creates the `waitlist` table in the remote database. If you created it before the "What are you looking for?" field existed, run `npm run db:migrate` instead, once.
-4. `npm run deploy` builds and publishes. The first run creates the `tamilnandu` Pages project.
+3. `npm run db:init` creates the `waitlist` table. For a database created before the "What are you looking for?" field existed, run `npm run db:migrate` once instead.
+4. `npm run deploy` builds and publishes to the `tamilnandu` Pages project.
 
-Wrangler may offer to create the Pages project when you run step 4. Accept it, and use `main` as the production branch.
+The custom domain is set under Custom domains in the Pages project.
 
-To use a custom domain, open the Pages project in the Cloudflare dashboard and go to Custom domains.
-
-## Reading signups
+**Reading signups**
 
 `npx wrangler d1 execute tamilnandu-waitlist --remote --command "SELECT email, name, interests, message, created_at FROM waitlist"`
 
-Export for a mailing tool by adding `--json`. Only email people who ticked consent, which every stored row has.
+Add `--json` to export. Only email people who ticked consent, which every stored row has.
