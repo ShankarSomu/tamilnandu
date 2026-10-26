@@ -171,6 +171,11 @@ export default function HomePage() {
                 hands-on advice, we want helpful people to find each other faster, with trust and
                 care.
               </p>
+              <p className="mt-4 leading-relaxed text-charcoal/85">
+                That could mean getting feedback on a résumé, finding someone to learn from, or
+                helping a small business owner connect with someone who has relevant experience.
+                These are examples of what we hope to make possible.
+              </p>
             </div>
             <ul className="grid gap-4 sm:grid-cols-2">
               {purposePoints.map((point) => (
@@ -199,8 +204,8 @@ export default function HomePage() {
                 Help us build it, together.
               </h2>
               <p className="mt-5 leading-relaxed text-white/85">
-                The platform doesn&apos;t exist yet, and we&apos;d rather build it with a community
-                than for one. Everyone is welcome, whatever your background or experience level.
+                We&apos;d rather build this with a community than for one. Everyone is welcome,
+                whatever your background or experience level.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
@@ -253,9 +258,6 @@ export default function HomePage() {
                 </div>
                 <h3 className="mt-5 text-lg font-semibold text-charcoal">{card.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-charcoal/80">{card.description}</p>
-                <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-crab">
-                  Planned
-                </p>
               </article>
             ))}
           </div>
@@ -295,16 +297,13 @@ export default function HomePage() {
             </span>
             <div>
               <h2 className="font-serif text-2xl font-bold leading-tight text-charcoal sm:text-3xl">
-                A community that looks after itself.
+                Respect is part of the plan.
               </h2>
               <p className="mt-4 max-w-3xl leading-relaxed text-charcoal/85">
-                TamilNandu will run on community feedback. Members can report posts that break the
-                rules or feel inappropriate, and anyone who posts violations or inappropriate
-                content will be blocked from the community. This keeps it a safe, kind place to ask
-                for and offer help.
-              </p>
-              <p className="mt-3 text-sm font-medium text-charcoal/75">
-                Planned for launch, not live yet.
+                We&apos;re planning clear community guidelines and a way to report concerns. Reports
+                will be reviewed, and responses may include removing content or restricting
+                accounts, depending on the seriousness of the issue. Our goal is a respectful place
+                to ask for and offer help.
               </p>
             </div>
           </div>
@@ -316,8 +315,12 @@ export default function HomePage() {
               <p className={eyebrow}>Join Early</p>
               <h2 className={h2}>Be part of the founding community.</h2>
               <p className="mt-5 leading-relaxed text-charcoal/85">
-                Add your email to hear launch updates and ways to contribute as we build
-                TamilNandu. Developers and community builders are especially welcome.
+                Join our early community to receive occasional updates and invitations to share
+                ideas, test the first version, or contribute your skills. You don&apos;t need to be
+                technical, and there&apos;s no obligation to volunteer.
+              </p>
+              <p className="mt-3 leading-relaxed text-charcoal/85">
+                Whether you hope to find support or to offer it, you&apos;re equally welcome here.
               </p>
               <ul className="mt-6 space-y-3 text-sm text-charcoal/80">
                 {[
