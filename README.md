@@ -24,7 +24,7 @@ Licensed under the [MIT License](./LICENSE).
 
 1. `npx wrangler login`
 2. `npx wrangler d1 create tamilnandu-waitlist`, then paste the printed `database_id` into [wrangler.toml](./wrangler.toml).
-3. `npm run db:init` creates the `waitlist` table in the remote database.
+3. `npm run db:init` creates the `waitlist` table in the remote database. If you created it before the "What are you looking for?" field existed, run `npm run db:migrate` instead, once.
 4. `npm run deploy` builds and publishes. The first run creates the `tamilnandu` Pages project.
 
 Wrangler may offer to create the Pages project when you run step 4. Accept it, and use `main` as the production branch.
@@ -33,6 +33,6 @@ To use a custom domain, open the Pages project in the Cloudflare dashboard and g
 
 ## Reading signups
 
-`npx wrangler d1 execute tamilnandu-waitlist --remote --command "SELECT email, name, interests, created_at FROM waitlist"`
+`npx wrangler d1 execute tamilnandu-waitlist --remote --command "SELECT email, name, interests, message, created_at FROM waitlist"`
 
 Export for a mailing tool by adding `--json`. Only email people who ticked consent, which every stored row has.

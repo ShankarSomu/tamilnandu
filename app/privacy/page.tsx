@@ -8,12 +8,14 @@ export default function PrivacyPage() {
       <div className="mt-6 space-y-4 rounded-2xl border border-charcoal/10 bg-white p-6 text-sm leading-relaxed sm:text-base">
         <p>
           TamilNandu currently collects only the details submitted through the early-interest form:
-          optional name, required email address, optional interests, and email consent.
+          optional name, required email address, optional interests, an optional free-text note about
+          what you are looking for, and email consent.
         </p>
         <p>
           This information is used only to send updates about the community launch and opportunities
-          to contribute. We do not sell your information, and we collect only what is needed for
-          updates.
+          to contribute, and to help us understand what the community needs. We do not sell your
+          information, and we collect only what is needed. Please do not include sensitive personal
+          details in your note.
         </p>
         <p>
           If you no longer want updates, you can unsubscribe from future emails once outreach
