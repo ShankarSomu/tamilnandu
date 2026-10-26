@@ -1,0 +1,9 @@
+# Every change needs a review from the maintainer.
+*                       @ShankarSomu
+
+# Privacy-sensitive areas
+/functions/             @ShankarSomu
+/schema.sql             @ShankarSomu
+/app/privacy/           @ShankarSomu
+/SECURITY.md            @ShankarSomu
+/CODE_OF_CONDUCT.md     @ShankarSomu

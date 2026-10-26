@@ -1,0 +1,27 @@
+name: Feature or improvement idea
+description: Suggest something for the TamilNandu site or platform
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this help with?
+      description: Describe the need, not just the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+    validations:
+      required: true
+  - type: dropdown
+    id: help
+    attributes:
+      label: Could you help build it?
+      options:
+        - Yes, I would like to build it
+        - I could help with part of it
+        - No, I am only suggesting
+    validations:
+      required: true

@@ -1,0 +1,8 @@
+name = "tamilnandu"
+compatibility_date = "2024-11-01"
+pages_build_output_dir = "out"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "tamilnandu-waitlist"
+database_id = "9dedd028-e507-4060-84da-4076e0b9e91f"
