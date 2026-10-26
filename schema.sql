@@ -3,6 +3,7 @@ CREATE TABLE IF NOT EXISTS waitlist (
   email TEXT NOT NULL UNIQUE,
   name TEXT,
   interests TEXT NOT NULL DEFAULT '[]',
+  message TEXT,
   consent INTEGER NOT NULL DEFAULT 1,
   created_at TEXT NOT NULL
 );

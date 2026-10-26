@@ -24,6 +24,7 @@ export function WaitlistForm() {
       name: (formData.get("name") ?? "").toString().trim(),
       email: (formData.get("email") ?? "").toString().trim(),
       interests: formData.getAll("interests").map((item) => item.toString()),
+      message: (formData.get("message") ?? "").toString().trim(),
       consent: formData.get("consent") === "on"
     };
 
@@ -119,6 +120,24 @@ export function WaitlistForm() {
             ))}
           </div>
         </fieldset>
+
+        <div>
+          <label className="mb-2 block text-sm font-medium text-charcoal" htmlFor="message">
+            What are you looking for? (optional)
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            rows={4}
+            maxLength={1000}
+            aria-describedby="message-hint"
+            className="w-full rounded-xl border border-charcoal/20 bg-white px-4 py-3 text-sm text-charcoal placeholder:text-charcoal/45"
+            placeholder="For example: I'm new to a city and want to meet people, or I'm a designer who can help build the site."
+          />
+          <p id="message-hint" className="mt-1 text-xs text-charcoal/65">
+            Tell us in your own words. Please don&apos;t include sensitive personal details. Up to 1000 characters.
+          </p>
+        </div>
 
         <div>
           <label className="flex items-start gap-3 text-sm text-charcoal">

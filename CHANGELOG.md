@@ -7,6 +7,14 @@ follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+
+- Optional "What are you looking for?" free-text field on the early-interest form (up to 1000 characters). Existing databases need `npm run db:migrate`.
+
+### Changed
+
+- Privacy Notice now mentions the free-text note.
+
 ## [0.1.0] - 2026-10-25
 
 First public version: the coming-soon landing page.
