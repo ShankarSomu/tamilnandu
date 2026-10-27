@@ -38,7 +38,7 @@ This Code of Conduct applies within all community spaces, and also applies when 
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement privately through GitHub: use "Report content" on the issue, pull request, or comment, or contact the maintainer [@ShankarSomu](https://github.com/ShankarSomu) directly. A dedicated contact address will be added here once the project has one. All complaints will be reviewed and investigated promptly and fairly.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement privately through GitHub: use "Report content" on the issue, pull request, or comment, or contact the maintainer [@ShankarSomu](https://github.com/ShankarSomu) directly. You can also email [info@tamilnandu.org](mailto:info@tamilnandu.org). All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the reporter of any incident.
 

@@ -58,7 +58,7 @@ You do not need a Cloudflare account to contribute. Everything runs locally.
 
 These come from the community's values. Changes that go against them will not be accepted.
 
-- **Privacy and consent first.** Do not add trackers, analytics, third-party scripts, or extra data collection without an agreed issue. Never commit real emails or personal data.
+- **Privacy and consent first.** Do not add trackers, analytics, third-party scripts, or extra data collection without an agreed issue. Never commit subscriber email addresses or personal data. Public project contact addresses explicitly approved by maintainers are okay.
 - **Honest copy.** Features that do not exist yet must be described as planned, not live. The first version is still being built.
 - **Inclusive by default.** Welcoming to people of every background, caste, and belief. Use plain, kind language.
 - **Accessible.** Real labels, keyboard use, visible focus, good contrast, and meaningful `alt` text.

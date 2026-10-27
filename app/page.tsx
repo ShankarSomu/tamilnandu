@@ -358,7 +358,7 @@ export default function HomePage() {
             <a href="/privacy" className="text-white">
               Privacy
             </a>
-            <a href={GITHUB_URL} className="text-white">
+            <a href="mailto:info@tamilnandu.org" className="text-white">
               Contact
             </a>
           </div>
