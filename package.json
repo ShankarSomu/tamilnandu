@@ -17,6 +17,8 @@
     "db:migrate": "wrangler d1 execute tamilnandu-waitlist --remote --file=migrations/0001_add_message.sql",
     "db:migrate:verification:local": "wrangler d1 execute tamilnandu-waitlist --local --file=migrations/0002_email_verification.sql",
     "db:migrate:verification": "wrangler d1 execute tamilnandu-waitlist --remote --file=migrations/0002_email_verification.sql",
+    "db:migrate:status:local": "wrangler d1 execute tamilnandu-waitlist --local --file=migrations/0003_signup_status.sql",
+    "db:migrate:status": "wrangler d1 execute tamilnandu-waitlist --remote --file=migrations/0003_signup_status.sql",
     "preview": "npm run build && wrangler pages dev out",
     "deploy": "npm run build && wrangler pages deploy out --project-name=tamilnandu"
   },
