@@ -7,6 +7,10 @@ follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Fixed
+
+- The Contact link now opens the mail app even when Cloudflare email obfuscation is on; the address is built in the browser.
+
 ### Added
 
 - `status` column on signups (`pending` or `verified`) for easy filtering. Existing databases need `npm run db:migrate:status`.
