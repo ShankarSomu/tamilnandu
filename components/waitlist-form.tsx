@@ -148,8 +148,8 @@ export function WaitlistForm() {
               className="mt-0.5 h-4 w-4 rounded border-charcoal/30 text-teal focus:ring-teal"
             />
             <span>
-              I agree to receive TamilNandu updates by email and understand I can unsubscribe at
-              any time. <span aria-hidden="true">*</span>
+              I agree to receive TamilNandu emails. I can unsubscribe at any time by replying to an
+              email or writing to info@tamilnandu.org. <span aria-hidden="true">*</span>
             </span>
           </label>
         </div>
@@ -166,7 +166,8 @@ export function WaitlistForm() {
           {status === "error" && <p className="font-medium text-red-700">{error}</p>}
           {status === "success" && (
             <p className="font-medium text-teal">
-              Thank you. You&apos;re on the early-interest list, and we&apos;ll share updates soon.
+              If your email needs confirmation, check your inbox for the link. If you already
+              confirmed, you&apos;re all set.
             </p>
           )}
         </div>
@@ -176,7 +177,7 @@ export function WaitlistForm() {
           disabled={status === "loading"}
           className="inline-flex items-center justify-center rounded-xl bg-teal px-5 py-3 text-sm font-semibold text-white transition hover:bg-teal/90 disabled:cursor-not-allowed disabled:bg-teal/60"
         >
-          {status === "loading" ? "Saving your request..." : "Keep Me Updated"}
+          {status === "loading" ? "Sending verification email..." : "Keep Me Updated"}
         </button>
       </div>
     </form>

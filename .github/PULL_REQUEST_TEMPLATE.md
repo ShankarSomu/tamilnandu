@@ -18,7 +18,7 @@
 - [ ] `npm run build` passes
 - [ ] The change is small and focused on one thing
 - [ ] Page copy that describes planned features still says they are planned, not live
-- [ ] No secrets, tokens, real emails, or personal data are included
+- [ ] No secrets, tokens, subscriber emails, or personal data are included; any public project contact address is maintainer-approved
 - [ ] I did not add trackers, analytics, or extra data collection
 - [ ] Accessibility is kept: labels, keyboard use, focus, and contrast
 - [ ] I updated `CHANGELOG.md` under **Unreleased** (for user-visible changes)

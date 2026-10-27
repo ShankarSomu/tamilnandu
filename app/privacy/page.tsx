@@ -9,17 +9,22 @@ export default function PrivacyPage() {
         <p>
           TamilNandu currently collects only the details submitted through the early-interest form:
           optional name, required email address, optional interests, an optional free-text note about
-          what you are looking for, and email consent.
+          what you are looking for, and email consent. We also store whether you confirmed access to
+          your email address and the expiry time for a one-time verification link. The link itself is
+          not stored in readable form.
         </p>
         <p>
-          This information is used only to send updates about the community launch and opportunities
-          to contribute, and to help us understand what the community needs. We do not sell your
-          information, and we collect only what is needed. Please do not include sensitive personal
-          details in your note.
+          We send one verification email after signup. Only after you confirm your email do we use
+          your information to send occasional community updates and opportunities to contribute, and
+          to understand what the community needs. We do not sell your information. Please do not
+          include sensitive personal details in your note.
         </p>
         <p>
-          If you no longer want updates, you can unsubscribe from future emails once outreach
-          begins.
+          To stop receiving emails or request deletion of your signup, reply to an email or write to{" "}
+          <a className="font-medium text-teal" href="mailto:info@tamilnandu.org">
+            info@tamilnandu.org
+          </a>
+          .
         </p>
       </div>
     </main>

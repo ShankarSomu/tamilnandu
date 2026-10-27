@@ -7,8 +7,13 @@ follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+
+- Double opt-in email verification for early-community signups, with a thank-you confirmation page and links to contribute.
+
 ### Changed
 
+- Clarified signup confirmation and unsubscribe contact details; added the community contact email to the footer, Privacy Notice, and Code of Conduct.
 - Copy refresh: clearer explanation of what joining means today, everyday examples of support, balanced welcome for people seeking and offering help, softer moderation wording, and fewer repeated "not live" disclaimers.
 
 ### Added
