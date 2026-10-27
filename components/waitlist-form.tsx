@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { ContactLink } from "@/components/contact-link";
 
 const interestOptions = [
   { id: "developer", label: "I'm a developer and want to help build the platform" },
@@ -149,7 +150,11 @@ export function WaitlistForm() {
             />
             <span>
               I agree to receive TamilNandu emails. I can unsubscribe at any time by replying to an
-              email or writing to info@tamilnandu.org. <span aria-hidden="true">*</span>
+              email or writing to{" "}
+              <ContactLink className="font-medium text-teal" showAddress>
+                our contact email
+              </ContactLink>
+              . <span aria-hidden="true">*</span>
             </span>
           </label>
         </div>
