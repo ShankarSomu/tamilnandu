@@ -48,7 +48,7 @@ export const onRequestPost = async ({
     const now = new Date().toISOString();
     const verified = await env.DB.prepare(
       `UPDATE waitlist
-       SET verified_at = ?1, verification_token_hash = NULL,
+       SET status = 'verified', verified_at = ?1, verification_token_hash = NULL,
            verification_expires_at = NULL, verification_sent_at = NULL
        WHERE verification_token_hash = ?2 AND verification_expires_at > ?1
          AND verified_at IS NULL

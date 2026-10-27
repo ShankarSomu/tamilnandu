@@ -42,7 +42,7 @@ Deployment and signup data need Cloudflare access, so contributors don't do thes
 
 1. `npx wrangler login`
 2. `npx wrangler d1 create tamilnandu-waitlist`, then paste the printed `database_id` into [wrangler.toml](./wrangler.toml).
-3. `npm run db:init` creates the current `waitlist` schema. For an existing database, run `npm run db:migrate:verification` once to add email-verification columns. If it predates the optional message field, apply `npm run db:migrate` first.
+3. `npm run db:init` creates the current `waitlist` schema. For an existing database, run `npm run db:migrate:verification` once to add email-verification columns, then `npm run db:migrate:status` to add the `status` column (`pending` or `verified`). If it predates the optional message field, apply `npm run db:migrate` first.
 4. Verify `tamilnandu.org` as a sending domain in Resend, including its DNS records.
 5. Add the Resend API key as a Pages secret: `npx wrangler pages secret put RESEND_API_KEY --project-name=tamilnandu`. Never put the key in source control or `wrangler.toml`.
 6. `npm run deploy` builds and publishes to the `tamilnandu` Pages project.
@@ -51,6 +51,6 @@ The custom domain is set under Custom domains in the Pages project. `wrangler.to
 
 **Reading signups**
 
-`npx wrangler d1 execute tamilnandu-waitlist --remote --command "SELECT email, name, interests, message, created_at FROM waitlist"`
+`npx wrangler d1 execute tamilnandu-waitlist --remote --command "SELECT email, name, status, verified_at, interests, message, created_at FROM waitlist"`
 
-Add `--json` to export. Email updates only people who both consented and have a non-null `verified_at`. The verification email is sent after consent and contains a one-time link that expires after 24 hours.
+Add `--json` to export. Email updates only people who consented and have `status = 'verified'`. The verification email is sent after consent and contains a one-time link that expires after 24 hours.

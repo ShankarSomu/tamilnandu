@@ -9,6 +9,7 @@ follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- `status` column on signups (`pending` or `verified`) for easy filtering. Existing databases need `npm run db:migrate:status`.
 - Double opt-in email verification for early-community signups, with a thank-you confirmation page and links to contribute.
 
 ### Changed

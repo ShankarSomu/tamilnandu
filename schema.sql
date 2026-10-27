@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS waitlist (
   message TEXT,
   consent INTEGER NOT NULL DEFAULT 1,
   created_at TEXT NOT NULL,
+  status TEXT NOT NULL DEFAULT 'pending',
   verified_at TEXT,
   verification_token_hash TEXT,
   verification_expires_at TEXT,
