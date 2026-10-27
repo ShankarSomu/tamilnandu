@@ -1,5 +1,6 @@
 import { CrabLogo } from "@/components/crab";
 import { Icon, IconName } from "@/components/icons";
+import { ContactLink } from "@/components/contact-link";
 import { WaitlistForm } from "@/components/waitlist-form";
 import pkg from "../package.json";
 
@@ -358,9 +359,7 @@ export default function HomePage() {
             <a href="/privacy" className="text-white">
               Privacy
             </a>
-            <a href="mailto:info@tamilnandu.org" className="text-white">
-              Contact
-            </a>
+            <ContactLink className="text-white">Contact</ContactLink>
           </div>
         </div>
       </footer>

@@ -1,3 +1,5 @@
+import { ContactLink } from "@/components/contact-link";
+
 export default function PrivacyPage() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-content bg-offwhite px-4 py-14 text-charcoal sm:px-6 lg:px-8">
@@ -21,9 +23,9 @@ export default function PrivacyPage() {
         </p>
         <p>
           To stop receiving emails or request deletion of your signup, reply to an email or write to{" "}
-          <a className="font-medium text-teal" href="mailto:info@tamilnandu.org">
-            info@tamilnandu.org
-          </a>
+          <ContactLink className="font-medium text-teal" showAddress>
+            our contact email
+          </ContactLink>
           .
         </p>
       </div>
